@@ -20,7 +20,7 @@ body {
     width: 70%;
     margin: 0 auto;
     overflow-x: hidden;
-    background: linear-gradient(to right, #dd2a7b, #f58529, #feda77);
+    background: linear-gradient(to right, #881146, #a65a1c, #c7a23c);
     display: grid;
     grid-template-columns: 8fr 2fr;
     font-family: Arial, Helvetica, sans-serif;
