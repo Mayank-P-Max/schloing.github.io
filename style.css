@@ -5,10 +5,21 @@ html {
     height: calc(100% - 2 * var(--margin-top-bottom));
 }
 
+@media only screen and (max-height: 1070px) {
+    html {
+        --margin-top-bottom: 35px;
+    }
+
+    .box {
+        width: 90% !important;
+    }
+}
+
 body {
     height: 100%;
     width: 70%;
     margin: 0 auto;
+    overflow-x: hidden;
     background: linear-gradient(to right, #dd2a7b, #f58529, #feda77);
     display: grid;
     grid-template-columns: 8fr 2fr;
@@ -39,7 +50,6 @@ h1 {
 .subheading {
     font-weight: normal;
     font-size: 33px;
-    line-height: 0;
 }
 
 a {
@@ -83,4 +93,11 @@ a {
     width: 60%;
     padding: 10px;
     margin: 15px 0;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
 }
