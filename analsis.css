@@ -1,0 +1,27 @@
+:root {
+    --graph1-color: #000;
+    --analysis1-color: #fff;
+    --graph2-color: #000;
+    --graph2-color: #fff;
+    --graph3-color: #000;
+    --graph3-color: #fff;
+}
+
+.content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.left-box {
+    background: var(--graph1-color);
+    width: 100%;
+    height: 100%;
+}
+
+.right-box {
+    background: var(--analysis1-color);
+    width: 100%;
+    height: 100%;
+}

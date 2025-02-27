@@ -3,6 +3,18 @@ html {
     --margin-top-bottom: 150px;
     margin: var(--margin-top-bottom) auto;
     height: calc(100% - 2 * var(--margin-top-bottom));
+    cursor: none;
+}
+
+*:hover {
+    cursor: none;
+}
+
+.finger {
+    position: absolute;
+    width: 200px;
+    transform: rotate(20deg);
+    z-index: 999;
 }
 
 @media only screen and (max-height: 1070px) {
@@ -25,18 +37,26 @@ html {
 
 body {
     height: 100%;
-    width: 70%;
     margin: 0 auto;
     overflow-x: hidden;
     /* background: linear-gradient(to right, #bc1862, #a65a1c, #c7a23c); */
     background: var(--background-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: auto 0;
+    width: 65%;
 }
 
 h1 {
@@ -44,10 +64,15 @@ h1 {
     display: inline-block;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
-    font-size: 140px;
+    font-size: 8em;
     text-transform: uppercase;
     /* transform: scaleY(0.5); */
     /* line-height: 0; */
+}
+
+.subheading {
+    font-weight: normal;
+    font-size: 1.75em;
 }
 
 .heading-pair {
@@ -56,11 +81,6 @@ h1 {
 
 .heading-pair>* {
     margin: 0;
-}
-
-.subheading {
-    font-weight: normal;
-    font-size: 33px;
 }
 
 a {
@@ -103,17 +123,40 @@ a.active::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    align-self: center;
+    /* height: 100%; */
+}
+
+.left {
+    width: 100%;
+    max-height: 100%;
+}
+
+.content-pair {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+:root {
+    --phone-width: 350px;
+    --phone-height: 696px;
+}
+
+.content {
+    height: var(--phone-height);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    gap: 1em;
 }
 
 .phone {
-    --phone-width: 300px;
-    --phone-height: 600px;
     width: var(--phone-width);
     height: var(--phone-height);
     background-repeat: no-repeat;
     background-size: var(--phone-width) var(--phone-height);
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.kibrispdr.org%2Fdata%2F671%2Fiphone-black-screen-png-56.png&f=1&nofb=1&ipt=25238d97674d638721995744faaeb18da308e3a55326f65d2be1b541b86e208e&ipo=images");
+    background-image: url("./iphone-black-screen-png-56-4035616577\(1\).png");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,9 +171,7 @@ a.active::before {
 .box {
     background: var(--secondary-color);
     color: var(--text-color);
-    width: 60%;
     padding: 10px;
-    margin: 15px 0;
 }
 
 @media only screen and (max-width: 1080px) {
