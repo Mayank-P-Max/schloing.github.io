@@ -1,0 +1,14 @@
+:root {
+    --graph1-color: #000;
+    --analysis1-color: #fff;
+    --graph2-color: #000;
+    --graph2-color: #fff;
+    --graph3-color: #000;
+    --graph3-color: #fff;
+}
+
+.main-box {
+    background: var(--graph1-color);
+    width: 100%;
+    height: 100%;
+}
