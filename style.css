@@ -104,15 +104,6 @@ a.active::before {
     height: 200%;
 }
 
-.navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    /* height: 100%; */
-}
-
 .left {
     width: 100%;
     max-height: 100%;
@@ -180,6 +171,10 @@ a.active::before {
         grid-template-columns: 1fr;
     }
 
+    .content {
+        height: 100%;
+    }
+
     main {
         width: 90%;
     }
@@ -194,5 +189,6 @@ a.active::before {
         gap: 10px;
         position: fixed;
         top: 0;
+        left: 0;
     }
 }
