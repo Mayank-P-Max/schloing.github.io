@@ -1,6 +1,6 @@
 const easter_egg_keybind = "ansh";
 let epic_ansh_prank_max = 100;
-let epic_ansh_prank_count = 100;
+let epic_ansh_prank_count = epic_ansh_prank_max;
 let keybinds_entered = [];
 let last_timer = new Date();
 
@@ -18,7 +18,7 @@ function epic_ansh_prank() {
         alert(`ansh mode activated. press enter ${100 - i} more times.`);
     }
 
-    localStorage.removeItem("ansh_mode");
+    localStorage.setItem("ansh_mode", 0);
 }
 
 document.addEventListener("keypress", (event) => {
