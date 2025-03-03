@@ -1,0 +1,79 @@
+/* Display all <a> tags as block-level items */
+#menu a { display: block; }
+
+/* Set margin and padding to 0px and remove bullets from all list items */
+#menu ul { 
+  padding:    0px;
+  margin:     0px;
+  list-style: none;
+}
+
+/* Move sub menu items off the screen and out of view until called */
+#topMenu li ul {
+  position: absolute;
+  left:     -999em;
+}
+
+/* Display sub menus when the mouse hovers over the top menu item (Used by <strong class="highlight">JavaScript</strong>) */
+#topMenu li:hover ul, #topMenu li.showMenu ul { left: auto; }
+
+#menu {
+  background-color: #01673D;  /* Background color of top menu */
+  font-family: Arial, Helvetica, sans-serif;  /* Font used for all menu items */
+  font-size: 12px;  /* Font size of all menu items */
+  height: 23px;  /* Height of top menu items */
+  line-height: 21px;  /* Line height of top menu items (vertically adjust text) */
+  margin: auto;  /* Centers menu on page */
+  width: 450px;  /* Width of top menu (must be set to center menu on page) */
+}
+
+#menu li { float: left; }  /* Display top menu items horizontally from left to right */
+
+#topMenu a { 
+  border: 1px solid #01673D;  /* Put border around all menu items */
+  border-right-width: 0px;  /* Remove right border from all menu items (to stop double borders between top menu items) */
+  text-decoration: none;  /* Remove underline from all menu item links */
+  width: 105px;  /* Top menu item width (adjusted from 150px to account for border width) */
+}
+
+
+.topMenuLink a {
+  color: #DDDDDD;  /* Set color of top menu text */
+  font-weight: bold;  /* Make top menu text bold */
+  text-align: center;  /* Center top menu text in menu button */
+}
+
+.topMenuLink a:hover {
+  background-color: #C4E2CE;  /* Set top menu rollover background color */
+  color: #333333;  /* Set top menu rollover text color */
+}
+
+.topMenuLink a#lastMenu { 
+  border-right-width: 1px;  /* Add right border to last top menu item */
+  width: 105px;  /* Adjust last top menu item width to fit within top menu */
+}
+
+.subMenu {
+  background-color: #01673D;  /* Set the background color of the sub menus */
+  border-right: 1px solid #01673D;  /* Add the right border back to the sub menus */
+  width: 105px;  /* Set the width of the sub menus */
+}
+
+.subMenu a {
+  color: #DDDDDD;  /* Set the font color of the sub menu items */
+  font-weight: normal;	  /* Return the font weight to normal for sub menu items */
+  height: 20px;  /* Set the height of the sub menu items */
+  line-height: 20px;  /* Set the line height of teh sub menu items (for vertical alignment) */
+  margin-top: -1px;  /* Set the top border of each sub menu link to -1px to remove double borders */
+}
+
+.subMenu a:hover {
+  background-color: #C4E2CE;  /* Set sub menu rollover background color */
+  color: #333333;  /* Set sub menu rollover text color */
+}
+
+.subMenu#last { width: 105px; }  /* Adjust width of last sub menu to align right border correctly */
+
+.subMenu#last a { width: 104px; }  /* Adjust width of links in last sub menu to display right border on rollover */.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold; color: #003333}
+
+
