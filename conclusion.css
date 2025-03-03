@@ -8,7 +8,7 @@
 }
 
 .main-box {
-    background: var(--graph1-color);
+    background: var(--secondary-color);
     width: 100%;
     height: 100%;
 }
