@@ -109,15 +109,18 @@ a.active::before {
     max-height: 100%;
 }
 
+:root {
+    --phone-width: 27%;
+    --phone-height: 500px;
+    --aspect-ratio: 0.5;
+}
+
 .content-pair {
     display: grid;
     grid-template-columns: 5fr 1fr;
     gap: 1em;
-}
-
-:root {
-    --phone-width: 350px;
-    --phone-height: 696px;
+    min-height: var(--phone-height);
+    max-height: var(--phone-height);
 }
 
 .content {
@@ -132,10 +135,11 @@ a.active::before {
 }
 
 .phone {
-    width: var(--phone-width);
+    /* width: var(--phone-width); */
     height: var(--phone-height);
+    aspect-ratio: var(--aspect-ratio);
     background-repeat: no-repeat;
-    background-size: var(--phone-width) var(--phone-height);
+    background-size: 100% 100%;
     background-image: url("./iphone-black-screen-png-56-4035616577\(1\).png");
     display: flex;
     flex-direction: column;
