@@ -9,6 +9,7 @@
 
 .main-box {
     background: var(--secondary-color);
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    min-height: fit-content;
 }
