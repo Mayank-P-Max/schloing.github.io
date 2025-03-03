@@ -69,10 +69,19 @@ h1 {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 400;
     z-index: 5;
+    transition: 100ms underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.phone>a {
+    color: var(--primary-color);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -80,7 +89,7 @@ a {
     text-align: center;
 }
 
-a::before {
+.phone>a::before {
     content: "";
     height: 50%;
     width: 100%;
@@ -92,7 +101,7 @@ a::before {
     background: linear-gradient(180deg, transparent 50%, var(--accent-color) 50%);
 }
 
-a:hover::before {
+.phone>a:hover::before {
     height: 200%;
 }
 
@@ -111,7 +120,7 @@ a.active::before {
 
 :root {
     --phone-width: 27%;
-    --phone-height: 500px;
+    --phone-height: 60vh;
     --aspect-ratio: 0.5;
 }
 
@@ -155,7 +164,7 @@ a.active::before {
 .box {
     background: var(--secondary-color);
     color: var(--text-color);
-    padding: 10px;
+    padding: 0 6px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -176,7 +185,7 @@ a.active::before {
     }
 
     .content {
-        height: 100%;
+        height: min-content;
     }
 
     main {
