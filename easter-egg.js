@@ -18,7 +18,7 @@ function epic_ansh_prank() {
         alert(`ansh mode activated. press enter ${100 - i} more times.`);
     }
 
-    localStorage.setItem("ansh_mode", 0);
+    localStorage.setItem("ansh_mode", 100);
 }
 
 document.addEventListener("keypress", (event) => {
